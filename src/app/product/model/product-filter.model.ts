@@ -1,7 +1,7 @@
 export interface IProductFilter {
-  pageSize: number;
+  pageSize?: number;
   page: number;
-  searchByName: string;
-  categoryId: number;
-  brandId: number;
+  searchByName?: string;
+  categoryId?: number;
+  brandId?: number;
 }

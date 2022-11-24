@@ -1,1 +1,10 @@
-<p>product-list-item works!</p>
+<p-card dir="rtl">
+  <ng-template pTemplate="header">
+    <img [src]="product.images[0]" [alt]="product.title">
+    <h3 class="text-lg white-space-nowrap overflow-hidden text-overflow-ellipsis px-2" [title]="product.title">{{product.title}}</h3>
+  </ng-template>
+  <div class="flex flex-row justify-content-between">
+    <label class="text-base text-500">قیمت:</label>
+    <span class="text-base text-color">{{product.fee | number:'1.0-0'}} تومان</span>
+  </div>
+</p-card>

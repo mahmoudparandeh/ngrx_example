@@ -1,1 +1,14 @@
-<p>product-list-page works!</p>
+<ng-container *ngIf="!loading; else showLoading">
+  <div class="flex flex-row flex-wrap">
+    <app-product-list-item class="col-12 lg:col-3 md:col-4 sm:col-6" *ngFor="let product of products" [product]="product"></app-product-list-item>
+  </div>
+
+</ng-container>
+<ng-template #showLoading>
+  <div class="flex flex-column justify-content-between align-items-center m-auto">
+    <p-progressSpinner></p-progressSpinner>
+    <span>Fetching data</span>
+  </div>
+</ng-template>
+
+

@@ -28,6 +28,6 @@ export class ProductService {
       query += 'search=' + productFilter.searchByName;
     }
 
-    return this.httpClient.get(this.baseUrl + query).pipe(map(response => ));
+    return this.httpClient.get(this.baseUrl + query);
   }
 }
